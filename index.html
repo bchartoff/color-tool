@@ -1,0 +1,42 @@
+<head>
+<style>
+#c1{
+	background: #1696d2;
+	width: 100%;
+	height: 2000px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+#c2{
+    background: #1787d2;
+    width: 80%;
+    top: 200px;
+    height: 500px;
+    left: 10%;
+	position: absolute;
+}
+#container{
+	width: 100%;
+	height: 2000px;
+	position: relative;
+}
+</style>
+</head>
+<body>
+<input id = "col1" value = "#1696d2">
+<input id = "col2" value = "#1787d2">
+<div id = "container">
+	<div id = "c1"></div>
+	<div id = "c2"></div>
+</div>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.js"></script>
+<script>
+d3.select("#col1").on("input", function(){
+	d3.select("#c1").style("background", this.value)
+})
+d3.select("#col2").on("input", function(){
+	d3.select("#c2").style("background", this.value)
+})
+</script>
+</body>
